@@ -7,6 +7,11 @@ body{
     display: flex;
     flex-direction: column;
 }
+.crash{
+    color: #888;
+    text-decoration: line-through;
+    font-weight: bold;
+}
 .container{ 
     display: flex;
     flex-direction: column;
@@ -32,7 +37,6 @@ body{
 }
 .desc{
     padding: 15px;
-    
     text-align: left;
 }
 
@@ -44,29 +48,45 @@ body{
 }
 .done{
     margin-right: 2px;
-    background-color: forestgreen;
+    background-color: #A0D8B3;
     border-radius: 5px;
     border: none;
     padding: 5px;
     cursor: pointer;
+    box-shadow: 0 4px #7ba589;
 }
 .done:hover{
-    opacity: 0.8;
+    opacity: 0.98;
 }
+.done:active{
+    background-color: #5d7a67;
+    box-shadow: 0 0.5px rgb(28, 98, 28);
+    transform: translateY(3.5px);
+}
+.clicked{
+    background-color: #7ba589;
+    box-shadow: 0 2px #5d7a67;
+    transform: translateY(2px);
+}
+
 .del{
     margin-right: 2px;    
-    background-color: crimson;
+    background-color: #E06469;
     border-radius: 5px;
     border: none;
     padding: 5px;
     cursor: pointer;
+    box-shadow: 0 4px #ae4f52;
 }
 .del:hover{
-    opacity: 0.8;
+    opacity: 0.98;
 }
-#task{
-    
+.del:active{
+    background-color: #ae4f52;
+    box-shadow: 0 2px #8e4043;
+    transform: translateY(2px);
 }
+
 
 .add{
     display: flex;
@@ -99,11 +119,21 @@ p{
     border: none;
     padding: 5px;
     cursor: pointer;
+    box-shadow: 0 4px rgb(65, 108, 110);
 }
-.addbtn:hover{
-    opacity: .05;
+#addbtn:hover{
+    opacity: .9;
+}
+#addbtn:active{
+    background-color: rgb(65, 108, 110);
+    box-shadow: 0 2px rgb(49, 82, 84);
+    transform: translateY(2px);
 }
 
 .btn{
     padding: 5px;
 }
+.ttl{
+    color: aliceblue;
+    text-shadow: 1px 1px 1px #000000;
+}  
