@@ -1,18 +1,10 @@
-
-
-
 function add(){
-    
     var btn = document.getElementById('int').value;
     if (btn == ""){
         alert("Please Enter a Task!");
         return false;
     }
     else{
-
-        
-
-
         document.getElementById('int').value = "";
         let con = document.querySelector('.content');
         let addition = document.createElement('div');
@@ -32,10 +24,8 @@ function add(){
         buttons.className = 'buttons';
         buttons.id = 'buttons';
 
-
         let done = document.createElement('button');
 
-        
         done.className = 'done';
         done.id = 'done';
         done.innerText = 'Done';
@@ -49,32 +39,15 @@ function add(){
 
         addition.append(buttons);
 
-
-        
-        
-        for (i = 0; i < close.length; i++) {
-            close[i].onclick = function() {
-              var div = this.parentElement.parentElement;
-              div.remove();
-            }
-        }
         var list = done;
-        list.addEventListener('click', function myFunction() {
+        list.addEventListener('click', function doneclick() {
             list.parentElement.previousElementSibling.classList.toggle("crash");
             list.classList.toggle('clicked');
           });
         
+        var delbtn = del;
+        delbtn.addEventListener('click', function delclick() {
+            del.parentElement.parentElement.remove();
+          });
     }
 }
-
-
-
-var close = document.getElementsByClassName("del");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement.parentElement;
-    div.remove();
-  }
-}
-
